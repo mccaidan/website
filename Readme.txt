@@ -1,6 +1,3 @@
-Thanks for downloading this template!
-
-Template Name: iPortfolio
+Aidan McCarthy's personal website, made with 
 Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Hosted on GitHub Pages
