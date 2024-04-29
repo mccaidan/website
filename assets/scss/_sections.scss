@@ -127,46 +127,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
---------------------------------------------------------------*/
-.skills {
-
-  .progress {
-    height: 60px;
-    display: block;
-    background: none;
-    border-radius: 0;
-  }
-
-  .progress .skill {
-    padding: 0;
-    margin: 0 0 6px 0;
-    text-transform: uppercase;
-    display: block;
-    font-weight: 600;
-    font-family: $font-secondary;
-    color: $secondary;
-  }
-
-  .progress .skill .val {
-    float: right;
-    font-style: normal;
-  }
-
-  .progress-bar-wrap {
-    background: lighten($secondary, 86);
-    height: 10px;
-  }
-
-  .progress-bar {
-    width: 1px;
-    height: 10px;
-    transition: .9s;
-    background-color: $primary;
-  }
-}
-
-/*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
 .resume {
