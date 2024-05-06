@@ -490,6 +490,17 @@ section {
   border: 2px solid #1f5297;
 }
 
+.resume .icon-large {
+  font-size: 80px;
+}
+
+.resume .download-resume {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/

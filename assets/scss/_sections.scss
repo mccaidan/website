@@ -189,7 +189,16 @@ section {
     border: 2px solid lighten($secondary, 30);
   }
 
+  .icon-large {
+    font-size: 80px;
+  }
 
+  .download-resume {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
 }
 
 /*--------------------------------------------------------------
