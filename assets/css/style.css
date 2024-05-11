@@ -505,7 +505,7 @@ section {
 # Skills
 --------------------------------------------------------------*/
 .skills .icon-box {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .skills .icon {
@@ -538,7 +538,7 @@ section {
 .skills .title {
   margin-left: 80px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-top: 16px;
   font-size: 18px;
 }
 
