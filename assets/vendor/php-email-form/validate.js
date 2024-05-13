@@ -54,6 +54,10 @@
       if( response.ok ) {
         return response.text();
       } else {
+        if( response.status === 422 ) {
+          //document.getElementById('email').value = '';
+          throw new Error("Invalid email entered");
+        }
         throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
       }
     })
