@@ -66,10 +66,7 @@
       if ( JSON.parse(data).ok ) {
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset();
-        setTimeout(() => {
-          const elem = document.getElementById("sen");
-          elem.parentNode.removeChild(elem);
-        }, 3000);
+        removeMessage("sen");
       } else {
         throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
       }
@@ -83,8 +80,12 @@
     thisForm.querySelector('.loading').classList.remove('d-block');
     thisForm.querySelector('.error-message').innerHTML = error;
     thisForm.querySelector('.error-message').classList.add('d-block');
+    removeMessage("err");
+  }
+
+  function removeMessage(id) {
     setTimeout(() => {
-      const elem = document.getElementById("err");
+      const elem = document.getElementById(id);
       elem.parentNode.removeChild(elem);
     }, 3000);
   }
