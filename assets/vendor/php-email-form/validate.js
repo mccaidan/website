@@ -17,8 +17,12 @@
         return;
       }
       thisForm.querySelector('.loading').classList.add('d-block');
-      thisForm.querySelector('.error-message').classList.remove('d-block');
-      thisForm.querySelector('.sent-message').classList.remove('d-block');
+      if (thisForm.querySelector('.error-message')) {
+        thisForm.querySelector('.error-message').classList.remove('d-block');
+      }
+      if (thisForm.querySelector('.sent-message')) {
+        thisForm.querySelector('.sent-message').classList.remove('d-block');
+      }
 
       let formData = new FormData( thisForm );
 
