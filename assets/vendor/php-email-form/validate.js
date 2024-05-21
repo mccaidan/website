@@ -17,12 +17,8 @@
         return;
       }
       thisForm.querySelector('.loading').classList.add('d-block');
-      if (thisForm.querySelector('.error-message')) {
-        thisForm.querySelector('.error-message').classList.remove('d-block');
-      }
-      if (thisForm.querySelector('.sent-message')) {
-        thisForm.querySelector('.sent-message').classList.remove('d-block');
-      }
+      thisForm.querySelector('.error-message').classList.remove('d-block');
+      thisForm.querySelector('.sent-message').classList.remove('d-block');
 
       let formData = new FormData( thisForm );
 
@@ -70,7 +66,7 @@
       if ( JSON.parse(data).ok ) {
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset();
-        removeMessage("sen");
+        removeMessage(thisForm, ".sent-message");
       } else {
         throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
       }
@@ -84,13 +80,12 @@
     thisForm.querySelector('.loading').classList.remove('d-block');
     thisForm.querySelector('.error-message').innerHTML = error;
     thisForm.querySelector('.error-message').classList.add('d-block');
-    removeMessage("err");
+    removeMessage(thisForm, ".error-message");
   }
 
-  function removeMessage(id) {
+  function removeMessage(thisForm, id) {
     setTimeout(() => {
-      const elem = document.getElementById(id);
-      elem.parentNode.removeChild(elem);
+      thisForm.querySelector(id).classList.remove('d-block');
     }, 3000);
   }
 
