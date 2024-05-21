@@ -58,6 +58,9 @@
           //document.getElementById('email').value = '';
           throw new Error("Invalid email entered");
         }
+        else if( response.status === 429 ) {
+          throw new Error("Too many submissions")
+        }
         throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
       }
     })
