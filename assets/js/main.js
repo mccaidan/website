@@ -260,4 +260,20 @@
    */
   new PureCounter();
 
+  /**
+   * Disable form until all required fields are filled
+   */
+  window.addEventListener('load', () => {
+    const form = document.getElementById("myForm");
+    const submitButton = document.getElementById("submitBtn");
+
+    form.addEventListener("input", () => {
+        const allFilled = [...form.elements]
+            .filter(el => el.hasAttribute("required"))
+            .every(el => el.value.trim() !== "");
+
+        submitButton.disabled = !allFilled;
+    });
+});
+
 })()
